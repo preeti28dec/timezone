@@ -1,9 +1,9 @@
 
-import React, { useEffect, useMemo, useState } from "react";
+import  { useEffect, useMemo, useState } from "react";
 import moment from "moment-timezone";
 
-function YourTime(props) {
-    const [tz, setTz] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
+function YourTime() {
+    const [tz] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
     const [datetime, setDatetime] = useState(moment());
     const dateTime = datetime.format('dddd, ') + datetime.format('DD MMMM YYYY')
     const today = new Date()
